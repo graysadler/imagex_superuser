@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Imagex Superuser feature.
+ */
+
+include_once 'imagex_superuser.features.inc';
