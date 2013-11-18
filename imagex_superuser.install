@@ -6,18 +6,9 @@
 /**
  * Implements hook_install().
  */
-function imagex_superuser_install() {
+function imagex_superuser_enable() {
   $account = user_load(1);
   $account->data['admin_select'] = 'admin_menu';
-  user_save($account);
-  if (function_exists('drush_log')) {
-    drush_log(__FUNCTION__, 'ok');
-  }
-}
-
-/**
- * Implements hook_uninstall().
- */
-function imagex_superuser_uninstall() {
-  // Empty.
+  $edit['data']['admin_select'] = 'admin_menu';
+  user_save($account, $edit);
 }
