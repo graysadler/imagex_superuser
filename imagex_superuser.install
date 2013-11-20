@@ -7,8 +7,5 @@
  * Implements hook_install().
  */
 function imagex_superuser_enable() {
-  $account = user_load(1);
-  $account->data['admin_select'] = 'admin_menu';
-  $edit['data']['admin_select'] = 'admin_menu';
-  user_save($account, $edit);
+
 }
